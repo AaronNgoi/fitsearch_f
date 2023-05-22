@@ -1,9 +1,158 @@
-.App {
-  color: #E6E6EA;
-}
-
 body {
   background-color: #090909;
+  min-height: 100vh;
+}
+@media (max-width: 710px) {
+  body {
+    position: relative;
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("assets/fitnessbg-s.webp");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: auto 400px;
+    z-index: -10;
+  }
+  body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 9, 9, 0.5);
+    z-index: -9;
+  }
+}
+@media (min-width: 711px) {
+  body {
+    position: relative;
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("assets/fitnessbg.webp");
+    background-position: top;
+    background-repeat: no-repeat;
+    z-index: -10;
+  }
+  body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 9, 9, 0.5);
+    z-index: -9;
+  }
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.App {
+  color: #E6E6EA;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.red-dark {
+  color: #850F05;
+}
+
+.hero {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+}
+.hero .hero-title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  color: #FFFFFF;
+  margin-block-end: 0.5rem;
+  font-weight: 600;
+}
+.hero .hero-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #AAAAB6;
+  max-width: 23rem;
+}
+
+.icon-45 {
+  height: 3rem;
+  width: 3rem;
+}
+
+.TopBar {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.TopBarText {
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.SearchBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #E6E6EA;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  max-width: 28rem;
+}
+
+.SearchText {
+  color: #090909;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+.SearchIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.FilterButton {
+  display: flex;
+  align-items: center;
+  background-color: #CA0707;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 16px;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: fit-content;
+}
+.FilterButton .FilterIcon {
+  left: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.5rem;
+}
+.FilterButton .FilterText {
+  font-weight: bold;
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=App.css.map */
