@@ -4,8 +4,8 @@ import Filter from '../assets/filter.svg'
 
 const SeeAllFiltersButton = () => {
     return (
-        <button className="FilterButton">
-            <p className="Filter Text"> See All Filters </p>
+        <button className="LightRedButton">
+            <p className="WhiteBold"> See All Filters </p>
             <img src={Filter} className="FilterIcon" alt="Filter"/>
         </button>
     );

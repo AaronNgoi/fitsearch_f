@@ -132,7 +132,7 @@ p {
   height: 40px;
 }
 
-.FilterButton {
+.LightRedButton {
   display: flex;
   align-items: center;
   background-color: #CA0707;
@@ -144,13 +144,12 @@ p {
   cursor: pointer;
   width: fit-content;
 }
-.FilterButton .FilterIcon {
-  left: 0.5rem;
+.LightRedButton .FilterIcon {
   width: 1.5rem;
   height: 1.5rem;
   margin-left: 0.5rem;
 }
-.FilterButton .FilterText {
+.LightRedButton .WhiteBold {
   font-weight: bold;
   color: #FFFFFF;
 }
