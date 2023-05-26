@@ -8,9 +8,30 @@ export const equipmentList = [
     'Stationary Bike', 'Tire', 'Trap Bar', 'Elliptical Machine', 'Stepmill Machine',
 ];
 
-// export const equipmentListSmall = [
-//     'Body Weight', 'Dumbbell', 'Cable', 'Barbell', 'Band', 'Weighted',
-// ];
+export const equipmentListSmall = [
+    'Body Weight', 'Dumbbell', 'Cable', 'Barbell', 'Band', 'Weighted',
+];
+
+
+export const bodyPartList = [
+    'Upper Arms', 'Upper Legs', 'Back', 'Waist', 'Chest',
+    'Shoulders', 'Lower Legs', 'Lower Arms', 'Cardio', 'Neck',
+];
+
+export const bodyPartListSmall = [
+    'Upper Arms', 'Upper Legs', 'Back', 'Waist', 'Chest',
+    'Shoulders',
+];
+
+export const targetMuscleList = [
+    'Abs', 'Pectorals', 'Biceps', 'Glutes', 'Delts', 'Triceps',  'Upper Back',
+    'Lats', 'Calves', 'Quads', 'Forearms', 'Cardiovascular System', 'Hamstrings',
+    'Spine', 'Traps', 'Adductors', 'Serratus Anterior', 'Abductors', 'Levator Scapulae',
+];
+
+export const targetMuscleListSmall = [
+    'Abs', 'Pectorals', 'Biceps', 'Glutes', 'Delts', 'Triceps', 'Lats',
+];
 
 
 export const handleFilterSelection = (selectedFilters, updateSelectedFilters, filter) => {
