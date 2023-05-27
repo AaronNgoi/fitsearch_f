@@ -1,10 +1,9 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import { FilterContext } from './filterContext';
 import { generateApiRequest } from './generateApiRequest';
 
 const CountFilteredExercises = () => {
-    const { selectedEquipment, selectedBodyPart, selectedTargetMuscle, searchedExerciseName } = useContext(FilterContext);
-    const [totalExercises, setTotalExercises] = useState(1327); // Default total exercise count
+    const { selectedEquipment, selectedBodyPart, selectedTargetMuscle, searchedExerciseName, setTotalExercises } = useContext(FilterContext);
 
     useEffect(() => {
         (async () => {
@@ -23,10 +22,10 @@ const CountFilteredExercises = () => {
 
             await fetchFilteredExerciseCount();
         })();
-    }, [selectedEquipment, selectedBodyPart, selectedTargetMuscle, searchedExerciseName]);
+    }, [selectedEquipment, selectedBodyPart, selectedTargetMuscle, searchedExerciseName, setTotalExercises]);
 
 
-    return <p> Show {totalExercises} Exercises </p>;
+    return null;
 };
 
 export default CountFilteredExercises;

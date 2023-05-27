@@ -1,4 +1,4 @@
-export const generateApiRequest = (selectedEquipment, searchedExerciseName, selectedBodyPart, selectedTargetMuscle) => {
+export const generateApiRequest = (selectedEquipment, searchedExerciseName, selectedBodyPart, selectedTargetMuscle, offset) => {
     let apiUrl = 'http://3.104.38.105:3000/api/exercises?';
 
     if (selectedEquipment.length > 0) {
@@ -24,8 +24,11 @@ export const generateApiRequest = (selectedEquipment, searchedExerciseName, sele
 
     if (searchedExerciseName) {
         const encodedExerciseName = encodeURIComponent(searchedExerciseName.replace(/ /g, ' '));
-        console.log(`Encoded exercise name: ${encodedExerciseName}`);
         apiUrl += `&name=${encodedExerciseName}`;
+    }
+
+    if (offset) {
+        apiUrl += `&offset=${offset}`;
     }
 
     console.log(`Final API URL: ${apiUrl}`);

@@ -11,7 +11,7 @@ import CountFilteredExercises from "../utils/CountFilteredExercises";
 const FilterPopOut = () => {
     const { toggleFilterPopout} = useContext(FilterContext);
 // import SubmitButton from "./SubmitButton"
-    const { selectedEquipment, updateSelectedEquipment, selectedBodyPart, updateSelectedBodyPart, selectedTargetMuscle, updateSelectedTargetMuscle } = useContext(FilterContext);
+    const { selectedEquipment, updateSelectedEquipment, selectedBodyPart, updateSelectedBodyPart, selectedTargetMuscle, updateSelectedTargetMuscle, totalExercises } = useContext(FilterContext);
 
     const searchExerciseApi = useSearchExerciseApi();
 
@@ -98,6 +98,7 @@ const FilterPopOut = () => {
 
             <div className="PopOutSubmitButton" onClick={handleSubmitClick}>
                 <CountFilteredExercises/>
+                 <p> Show {totalExercises} Exercises </p>
             </div>
 
         </div>

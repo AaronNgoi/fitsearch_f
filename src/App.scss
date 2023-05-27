@@ -122,9 +122,11 @@ p {
 
 .TopBar {
   padding-top: 1rem;
+  padding-bottom: 0.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
+  max-width: 30rem;
 }
 
 .TopBarText {
@@ -140,23 +142,25 @@ p {
   padding: 0.25rem;
   border-radius: 0.5rem;
   max-width: 30rem;
+  flex-grow: 1;
 }
 
 .SearchText {
   color: $off-black;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
   font-size: 18px;
   font-weight: 500;
   background-color: transparent;
-  flex: 1;
+  flex-grow: 1;
   border: none;
   outline: none;
-
+  display: flex;
+  width: 100px;
 }
 
 .SearchIcon {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
 }
 
 .LightRedButton {
@@ -166,15 +170,15 @@ p {
   color: $white;
   border: none;
   padding: 8px 16px;
-  margin: 1rem 0;
+  margin: 0.75rem 0;
   border-radius: 0.5rem;
   cursor: pointer;
   width: fit-content;
 }
 
 .FilterIcon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   margin-left: 0.5rem;
 }
 
@@ -204,7 +208,7 @@ button.BlackRedButton {
   border-color: $red-dark;
   border-style: solid;
   padding: 8px 16px;
-  margin: 1rem 0;
+  margin: 0.75rem 0;
   border-radius: 0.5rem;
   cursor: pointer;
   width: fit-content;
@@ -220,6 +224,7 @@ button.BlackRedButton {
   height: 100%;
   overflow-y: auto;
 
+
   .FilterPadding{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -228,6 +233,9 @@ button.BlackRedButton {
 
 }
 
+.mr-4px {
+  margin-right: 8px;
+}
 
 
 .FilterPopOutHeader{
@@ -236,6 +244,8 @@ button.BlackRedButton {
   border-bottom-width: 1px;
   border-color: $red-dark;
   border-bottom-style: solid;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .PopUpFilterSection {
@@ -315,6 +325,119 @@ button.BlackRedButton {
   align-items: center;
   border: none;
 }
+
+
+
+.exerciseComponent {
+  background: $gray-component;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 1rem;
+  max-width: 22rem;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+
+
+  .text {
+    flex-direction: column;
+    display: flex;
+
+    .HeaderText {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .SubText {
+      color: $gray-button;
+      font-weight: 500;
+    }
+
+  }
+
+  .shrunken {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .exerciseIcon {
+    height: 1.875rem;
+    width: 1.875rem;
+  }
+
+  .exerciseIconSmall {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .gifImage {
+    height: auto;
+    max-height: 18rem;
+    max-width: 18rem;
+    border-radius: 1rem;
+    opacity: 80%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+  }
+
+  .ExpandedSection{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .BottomStats{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .StatGroup {
+    flex-direction: row;
+    display: flex;
+  }
+
+  .StatText {
+    margin-left: 0.5rem;
+  }
+
+};
+
+.SearchedTopButtons {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  max-width: 30rem;
+}
+
+.exerciseComponentContainer {
+  display: grid;
+  grid-template-columns: 1fr; // 1 column in mobile view
+  gap: 0.1rem;
+  justify-items: center;
+  max-width: 30rem;
+}
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 30rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.pagination-description {
+  flex-grow: 1;
+  text-align: center;
+}
+
 
 @media (min-width: 710px) {
   .FilterPopOut {

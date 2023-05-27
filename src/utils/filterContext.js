@@ -10,6 +10,8 @@ export const FilterProvider = ({ children }) => {
     const [searchedExerciseName, setSearchedExerciseName] = useState('');
     const [isSearchPage, setIsSearchPage] = useState(false);
     const [receivedData, setReceivedData] = useState([]);
+    const [totalExercises, setTotalExercises] = useState(1327)
+    const [currentPage, setCurrentPage] = useState(1);
 
     const updateSelectedEquipment = (selected) => {
         setSelectedEquipment(selected);
@@ -50,6 +52,10 @@ export const FilterProvider = ({ children }) => {
         selectSearchPage,
         receivedData,
         setReceivedData,
+        totalExercises,
+        setTotalExercises,
+        currentPage,
+        setCurrentPage,
     };
 
     return (

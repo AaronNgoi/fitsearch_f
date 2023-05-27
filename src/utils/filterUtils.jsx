@@ -46,6 +46,17 @@ export const handleFilterSelection = (selectedFilters, updateSelectedFilters, fi
     }
 };
 
+export const handleActiveFilterRemoval = (selectedFilters, updateSelectedFilters, filter) => {
+    const isSelected = selectedFilters.includes(filter);
+
+    if (isSelected) {
+        const updatedSelection = selectedFilters.filter((item) => item !== filter);
+        updateSelectedFilters(updatedSelection);
+
+    } else {
+    }
+};
+
 
 export const resetFilterSectionSelection = (updateSelectedSection) => {
     return () => {

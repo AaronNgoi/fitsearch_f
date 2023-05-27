@@ -11,7 +11,8 @@ const useSearchExerciseApi = () => {
         selectSearchPage,
         isFilterPopoutOpen,
         toggleFilterPopout,
-        setReceivedData
+        setReceivedData,
+        setCurrentPage
     } = useContext(FilterContext);
 
     return async () => {
@@ -22,6 +23,7 @@ const useSearchExerciseApi = () => {
                 selectedBodyPart,
                 selectedTargetMuscle
             );
+            console.log("useSearchHook url", url);
             const response = await fetch(url);
             const data = await response.json();
             console.log("data", data);
@@ -29,6 +31,7 @@ const useSearchExerciseApi = () => {
             if (isFilterPopoutOpen) { // Conditionally call toggleFilterPopout if available
                 toggleFilterPopout();
             }
+            setCurrentPage(1);
             setReceivedData(data);
         } catch (error) {
             console.error('Error:', error);
