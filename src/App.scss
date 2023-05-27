@@ -139,7 +139,7 @@ p {
   background-color: $off-white;
   padding: 0.25rem;
   border-radius: 0.5rem;
-  max-width: 28rem;
+  max-width: 30rem;
 }
 
 .SearchText {
@@ -253,6 +253,7 @@ button.BlackRedButton {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 30rem;
 }
 
 %button-style {
@@ -299,6 +300,21 @@ button.BlackRedButton {
   z-index: 80;
 }
 
+.HomeSubmitButton {
+  height: 3rem;
+  background-color: $gray-submit;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 30rem;
+  color: $off-black;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
 
 @media (min-width: 710px) {
   .FilterPopOut {

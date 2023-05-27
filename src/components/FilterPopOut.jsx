@@ -2,41 +2,29 @@ import React, { useContext } from 'react';
 import xIcon from "../assets/x.svg"
 import { FilterContext } from '../utils/filterContext';
 import { equipmentList, bodyPartList, targetMuscleList, handleFilterSelection, resetFilterSectionSelection } from '../utils/filterUtils';
-import {generateApiRequest} from "../utils/generateApiRequest";
+import useSearchExerciseApi from "../utils/useSearchExerciseApi";
+import ResetAllFiltersButton from './ResetAllFiltersButton';
+import CountFilteredExercises from "../utils/CountFilteredExercises";
 
+// import SubmitButton from "./SubmitButton"
 
 const FilterPopOut = () => {
-    const { toggleFilterPopout, selectSearchPage, setReceivedData, } = useContext(FilterContext);
-    const { selectedEquipment, updateSelectedEquipment, selectedBodyPart, updateSelectedBodyPart, selectedTargetMuscle, updateSelectedTargetMuscle, searchedExerciseName  } = useContext(FilterContext);
+    const { toggleFilterPopout} = useContext(FilterContext);
+// import SubmitButton from "./SubmitButton"
+    const { selectedEquipment, updateSelectedEquipment, selectedBodyPart, updateSelectedBodyPart, selectedTargetMuscle, updateSelectedTargetMuscle } = useContext(FilterContext);
 
-    const handleButtonClick = async () => {
-        try {
-            const url = generateApiRequest(selectedEquipment, searchedExerciseName, selectedBodyPart, selectedTargetMuscle);
-        const response = await fetch(url);
-        const data = await response.json();
-        console.log("data", data);
-        selectSearchPage(true);
-        toggleFilterPopout();
-        setReceivedData(data);
-    } catch (error) {
-        console.error('Error:', error);
-    }
-};
+    const searchExerciseApi = useSearchExerciseApi();
+
+    const handleSubmitClick = async () => {
+        await searchExerciseApi();
+    };
 
     return (
         <div className="FilterPopOut">
             <div className="FilterPadding">
                 <div className="FilterPopOutHeader">
-                    <button className="BlackRedButton" onClick={() => {
-                        resetFilterSectionSelection(updateSelectedEquipment)();
-                        resetFilterSectionSelection(updateSelectedBodyPart)();
-                        resetFilterSectionSelection(updateSelectedTargetMuscle)();
-                    }}>
-                        <p className="WhiteBold">Reset All</p>
-                        <img src={xIcon} className="XIcon" alt="X Icon" />
-                    </button>
-
-                    <button className="LightRedButton" onClick={toggleFilterPopout}>
+                    <ResetAllFiltersButton/>
+                    <button className="LightRedButton" onClick={() => toggleFilterPopout()}>
                         <p className="WhiteBold">Close Filters</p>
                         <img src={xIcon} className="XIcon" alt="X Icon" />
                     </button>
@@ -108,9 +96,8 @@ const FilterPopOut = () => {
 
             </div>
 
-
-            <div className="PopOutSubmitButton" onClick={handleButtonClick}>
-                Show {"X"} results
+            <div className="PopOutSubmitButton" onClick={handleSubmitClick}>
+                <CountFilteredExercises/>
             </div>
 
         </div>

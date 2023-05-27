@@ -118,7 +118,7 @@ p {
   background-color: #E6E6EA;
   padding: 0.25rem;
   border-radius: 0.5rem;
-  max-width: 28rem;
+  max-width: 30rem;
 }
 
 .SearchText {
@@ -227,6 +227,7 @@ button.BlackRedButton {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 30rem;
 }
 
 .ActiveFilterButton, .FilterButton {
@@ -269,6 +270,22 @@ button.BlackRedButton {
   justify-content: center;
   align-items: center;
   z-index: 80;
+}
+
+.HomeSubmitButton {
+  height: 3rem;
+  background-color: #474C57;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 30rem;
+  color: #090909;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
 }
 
 @media (min-width: 710px) {

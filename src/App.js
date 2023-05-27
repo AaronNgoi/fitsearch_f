@@ -8,6 +8,8 @@ import SeeAllFiltersButton from "./components/SeeAllFiltersButton";
 import FilterPopOut from './components/FilterPopOut';
 import { FilterProvider, FilterContext } from './utils/filterContext';
 import HomeQuickFilter from "./components/HomeQuickFilter";
+import ResetAllFiltersButton from "./components/ResetAllFiltersButton";
+import SearchExercisesButton from "./components/SearchExercisesButton";
 
 
 function App() {
@@ -25,8 +27,12 @@ function App() {
                     </div>
                     <HomeText />
                     <SearchBar />
+                    <div className="FilterSectionHeader">
                     <SeeAllFiltersButton />
+                    <ResetAllFiltersButton/>
+                    </div>
                     <HomeQuickFilter />
+                    <SearchExercisesButton />
                 </div>
             )}
 

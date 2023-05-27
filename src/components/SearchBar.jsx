@@ -1,12 +1,19 @@
 import React, { useContext } from 'react';
 import Search from "../assets/search.svg"
 import { FilterContext } from '../utils/filterContext';
+import useSearchExerciseApi from '../utils/useSearchExerciseApi';
 
 const SearchBar = () => {
     const { searchedExerciseName, updateSearchedExerciseName } = useContext(FilterContext);
 
+    const searchExerciseApi = useSearchExerciseApi();
+
     const handleInputChange = (event) => {
         updateSearchedExerciseName(event.target.value);
+    };
+
+    const handleSearchClick = async () => {
+        await searchExerciseApi(); // Use the searchExerciseApi function from the useSearchExerciseApi hook
     };
 
     return (
@@ -18,7 +25,7 @@ const SearchBar = () => {
                 onChange={handleInputChange}
                 placeholder="Find Your Exercise"
             />
-            <img src={Search} className="SearchIcon" alt="SearchIcon" />
+            <img src={Search} className="SearchIcon" alt="SearchIcon" onClick={handleSearchClick}/>
         </div>
     );
 };
