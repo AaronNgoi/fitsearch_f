@@ -1,34 +1,32 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { FilterContext } from '../utils/filterContext';
 import {handleActiveFilterRemoval} from '../utils/filterUtils';
 import xIcon from "../assets/x.svg";
-import useSearchExerciseApi from "../utils/useSearchExerciseApi"
+import useSearchExerciseApiEffect from "../utils/useSearchExerciseApiEffect"
 import  CountFilteredExercises from "../utils/CountFilteredExercises"
 
 
-const useHandleClick = (searchExerciseApi) => {
-    const handleActiveFilterRemoval = async (selectedFilters, updateSelectedFilters, filter) => {
-        await handleActiveFilterRemoval(selectedFilters, updateSelectedFilters, filter);
-    };
-
-    const handleClick => {
-        await searchExerciseApi();
-    };
-
-    return handleClick;
-};
-
 
 const ActiveFilters = () => {
-    const { selectedEquipment, selectedBodyPart, selectedTargetMuscle, updateSelectedEquipment, updateSelectedBodyPart, updateSelectedTargetMuscle } = useContext(FilterContext);
+    const { selectedEquipment, selectedBodyPart, selectedTargetMuscle, updateSelectedEquipment, updateSelectedBodyPart, updateSelectedTargetMuscle, searchedExerciseName } = useContext(FilterContext);
 
-    const searchExerciseApi = useSearchExerciseApi();
-    const handleClick = useHandleClick(searchExerciseApi);
+    const searchExerciseApiEffect = useSearchExerciseApiEffect();
 
+    useEffect(() => {
+        const searchExercises = async () => {
+            return await searchExerciseApiEffect();
+        };
 
-return (
+        searchExercises();
+    }, [selectedEquipment, selectedBodyPart, selectedTargetMuscle, searchedExerciseName]);
+
+    const handleClick = async (selectedFilters, updateSelectedFilters, filter) => {
+        handleActiveFilterRemoval(selectedFilters, updateSelectedFilters, filter);
+    };
+
+        return (
     <div className="ActiveButtonContainer ButtonContainer">
-        {/*<CountFilteredExercises></CountFilteredExercises>*/}
+        <CountFilteredExercises></CountFilteredExercises>
         {selectedEquipment.map((equipment) => (
             <button className="ActiveFilterButton" onClick={() => handleClick(selectedEquipment, updateSelectedEquipment, equipment)}>
                 {equipment} <img src={xIcon} className="XIcon" alt="X Icon" />
