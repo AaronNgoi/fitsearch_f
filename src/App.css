@@ -77,8 +77,8 @@ p {
   text-align: left;
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
-  margin-bottom: 2.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
 }
 .hero .hero-title {
   font-size: 1.875rem;
@@ -99,7 +99,7 @@ p {
   width: 3rem;
 }
 
-.TopBar {
+.TopBarMobile {
   padding-top: 1rem;
   padding-bottom: 0.5rem;
   display: flex;
@@ -232,6 +232,7 @@ button.BlackRedButton {
   display: flex;
   flex-direction: column;
   max-width: 30rem;
+  padding-bottom: 0.5rem;
 }
 
 .FilterSectionHeader {
@@ -273,9 +274,15 @@ button.BlackRedButton {
   flex-wrap: wrap;
   overflow-y: auto;
   max-height: 5.5rem;
-  scrollbar-width: thin;
-  scrollbar-color: #850F05;
   max-width: 30rem;
+}
+
+.ActiveButtonContainer::-webkit-scrollbar-track {
+  background: #292929;
+}
+
+.ActiveButtonContainer::-webkit-scrollbar-thumb {
+  background: #850F05;
 }
 
 .PopOutSubmitButton {
@@ -384,6 +391,10 @@ button.BlackRedButton {
   max-width: 30rem;
 }
 
+.FilterSectionHeader.noMax {
+  max-width: 100%;
+}
+
 .exerciseComponentContainer {
   display: grid;
   grid-template-columns: 1fr;
@@ -406,6 +417,16 @@ button.BlackRedButton {
   text-align: center;
 }
 
+.LandingPage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.TopBarDesktop {
+  display: none;
+}
+
 @media (min-width: 710px) {
   .FilterPopOut {
     width: 710px;
@@ -413,6 +434,166 @@ button.BlackRedButton {
   }
   .PopOutSubmitButton {
     width: 710px;
+  }
+  .LandingPage {
+    align-items: start;
+    padding-left: 5rem;
+  }
+  .SearchPage {
+    align-items: start;
+    padding-left: 5rem;
+  }
+  .TopBarMobile {
+    padding-top: 1.75rem;
+    padding-bottom: 1rem;
+  }
+  .hero {
+    margin-top: 1rem;
+  }
+  .hero .hero-title {
+    font-size: 2.75rem;
+    max-width: 30rem;
+    line-height: 3.25rem;
+    margin-bottom: 0.75rem;
+  }
+  .SearchIcon {
+    width: 40px;
+    height: 40px;
+  }
+  .FilterSection {
+    padding-bottom: 1rem;
+  }
+  .FilterSectionHeader {
+    max-width: 100%;
+  }
+}
+.DesktopTopBarHeader {
+  display: none;
+}
+
+@media (min-width: 1020px) {
+  .SearchWrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  .SearchPage {
+    padding-left: 3rem;
+  }
+  .FirstHalf {
+    padding-top: 1rem;
+  }
+  .TopBarMobile {
+    display: none;
+  }
+  .TopBarMobile.noHide {
+    display: flex;
+  }
+  .TopBarDesktop {
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    flex-direction: row;
+    align-items: center;
+    max-width: 30rem;
+    min-width: 25rem;
+  }
+  .DesktopTopBarHeader {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .ActiveButtonContainer {
+    max-height: 8rem;
+  }
+  .exerciseComponent {
+    background: #292929;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+    max-width: 32rem;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+  }
+  .PaginationExercise {
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .pagination-container {
+    padding-top: 3rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .exerciseComponentContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+    justify-items: center;
+    max-width: 32rem;
+  }
+  .QuickFilter {
+    padding-top: 2rem;
+  }
+  .QuickPadding {
+    margin-bottom: 2rem;
+  }
+  .QuickPadding2 {
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 1420px) {
+  .SearchWrapper {
+    align-items: flex-start;
+  }
+  .exerciseComponent {
+    background: #292929;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+    min-width: 25.5rem;
+    max-width: 32rem;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+  }
+  .PaginationExercise {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .pagination-container {
+    padding-top: 3rem;
+    justify-content: space-between;
+    max-width: 900px;
+    font-size: 1.375rem;
+    margin-bottom: 2rem;
+  }
+  .exerciseComponentContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.3rem;
+    justify-items: center;
+    column-gap: 3rem;
+    max-width: 100%;
+  }
+  .QuickFilter {
+    padding-top: 2rem;
+  }
+  .QuickPadding {
+    margin-bottom: 2rem;
+  }
+  .QuickPadding2 {
+    margin-bottom: 1rem;
   }
 }
 

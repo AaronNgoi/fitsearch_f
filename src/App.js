@@ -37,7 +37,8 @@ function App() {
 
             {!isSearchPage && (
                 <div className="LandingPage">
-                    <div className="TopBar">
+                    <div className='LandingWrapper'>
+                    <div className="TopBarMobile noHide">
                         <img src={fitSearchIcon} className="icon-45" alt="BrandIcon" />
                         <p className="TopBarText">FitSearch</p>
                     </div>
@@ -49,25 +50,48 @@ function App() {
                     </div>
                     <HomeQuickFilter />
                     <SearchExercisesButton />
+                    </div>
                 </div>
             )}
 
             {isSearchPage && (
 
                 <div className="SearchPage">
-                    <div className="XXX">
-                        <div className="TopBar">
+                    <div className="SearchWrapper">
+                        <div className='FirstHalf'>
+                            {/*TopbarMobile is hidden above 1020px*/}
+                        <div className="TopBarMobile">
                             <img src={fitSearchIcon} className="icon-45 mr-4px" alt="BrandIcon" onClick={() => selectSearchPage(false)}/>
                             <SearchBar />
                         </div>
-                        <div className='SearchedTopButtons'>
+                            <div className='DesktopTopBarHeader'>
+                            <div className="TopBarDesktop QuickPadding">
+                                <img src={fitSearchIcon} className="icon-45" alt="BrandIcon" onClick={() => selectSearchPage(false)}/>
+                                <p className="TopBarText ">FitSearch</p>
+                            </div>
+                                <SearchBar />
+                            </div>
+
+
+                        <div className='SearchedTopButtons QuickPadding2'>
                         <SeeAllFiltersButton />
                             {totalExercises < 1327 && <ClearSearchedExercisesButton />}
                         </div>
 
-                        <div>
+
                             <ActiveFilters/>
+
+                            <div className='DesktopTopBarHeader'>
+                                <div className='QuickFilter'>
+                                <HomeQuickFilter />
+                                <SearchExercisesButton />
+                                </div>
+                            </div>
+
+
+
                         </div>
+                        <div className='PaginationExercise'>
                         <Pagination resultsPerPage={10} />
                         <div className='exerciseComponentContainer'>
                         {receivedData.map((exercise) => (
@@ -105,6 +129,7 @@ function App() {
                             </div>
                         ))}
 
+                        </div>
                         </div>
                     </div>
                 </div>

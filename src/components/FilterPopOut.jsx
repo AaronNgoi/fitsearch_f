@@ -30,7 +30,7 @@ const FilterPopOut = () => {
                     </button>
                 </div>
                 <div className="PopUpFilterSection">
-                    <div className="FilterSectionHeader">
+                    <div className="FilterSectionHeader noMax">
                         <div className="WhiteBold18">Equipment</div>
                         <button className="BlackRedButton" onClick={resetFilterSectionSelection(updateSelectedEquipment)}>
                             <p className="WhiteBold">Reset Section</p>
@@ -51,7 +51,7 @@ const FilterPopOut = () => {
                 </div>
 
                 <div className="PopUpFilterSection">
-                    <div className="FilterSectionHeader">
+                    <div className="FilterSectionHeader noMax">
                         <div className="WhiteBold18">Body Part</div>
                         <button className="BlackRedButton" onClick={resetFilterSectionSelection(updateSelectedBodyPart)}>
                             <p className="WhiteBold">Reset Section</p>
@@ -72,7 +72,7 @@ const FilterPopOut = () => {
                 </div>
 
                 <div className="PopUpFilterSection">
-                    <div className="FilterSectionHeader">
+                    <div className="FilterSectionHeader noMax">
                         <div className="WhiteBold18">Target Muscle</div>
                         <button className="BlackRedButton" onClick={resetFilterSectionSelection(updateSelectedTargetMuscle)}>
                             <p className="WhiteBold">Reset Section</p>
