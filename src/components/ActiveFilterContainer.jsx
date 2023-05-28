@@ -25,7 +25,7 @@ const ActiveFilters = () => {
     };
 
         return (
-    <div className="ActiveButtonContainer ButtonContainer">
+    <div className="ActiveButtonContainer">
         <CountFilteredExercises></CountFilteredExercises>
         {selectedEquipment.map((equipment) => (
             <button className="ActiveFilterButton" onClick={() => handleClick(selectedEquipment, updateSelectedEquipment, equipment)}>

@@ -287,11 +287,22 @@ button.BlackRedButton {
 .ActiveFilterButton {
   @extend %button-style;
   background-color: $red-dark;
+  white-space: nowrap;
 }
 
 .ButtonContainer {
   display: flex;
   flex-wrap: wrap;
+}
+
+.ActiveButtonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  max-height: 5.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: $red-dark;
+  max-width: 30rem;
 }
 
 .PopOutSubmitButton {
