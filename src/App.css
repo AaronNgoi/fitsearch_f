@@ -97,6 +97,10 @@ p {
 .icon-45 {
   height: 3rem;
   width: 3rem;
+  transition: transform 0.3s ease;
+}
+.icon-45:hover {
+  transform: scale(1.08);
 }
 
 .TopBarMobile {
@@ -140,6 +144,10 @@ p {
 .SearchIcon {
   width: 36px;
   height: 36px;
+  transition: transform 0.3s ease;
+}
+.SearchIcon:hover {
+  transform: scale(1.08);
 }
 
 .LightRedButton {
@@ -153,6 +161,13 @@ p {
   border-radius: 0.5rem;
   cursor: pointer;
   width: fit-content;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  transition: transform 0.3s ease;
+}
+.LightRedButton:hover {
+  transform: scale(1.05);
+  filter: brightness(115%);
 }
 
 .FilterIcon {
@@ -193,6 +208,13 @@ button.BlackRedButton {
   border-radius: 0.5rem;
   cursor: pointer;
   width: fit-content;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  transition: transform 0.3s ease;
+}
+button.BlackRedButton:hover {
+  transform: scale(1.05);
+  filter: brightness(115%);
 }
 
 .FilterPopOut {
@@ -213,6 +235,15 @@ button.BlackRedButton {
 
 .mr-4px {
   margin-right: 8px;
+}
+
+.mobile-padding-8 {
+  padding: 8px 8px !important;
+}
+@media (min-width: 396px) {
+  .mobile-padding-8 {
+    padding: 8px 16px !important;
+  }
 }
 
 .FilterPopOutHeader {
@@ -259,6 +290,11 @@ button.BlackRedButton {
 
 .FilterButton {
   background-color: #737387;
+  transition: transform 0.3s ease;
+}
+.FilterButton:hover {
+  transform: scale(1.05);
+  filter: brightness(115%);
 }
 
 .text-sm {
@@ -269,6 +305,11 @@ button.BlackRedButton {
 .ActiveFilterButton {
   background-color: #850F05;
   white-space: nowrap;
+  transition: transform 0.3s ease;
+}
+.ActiveFilterButton:hover {
+  transform: scale(1.05);
+  filter: brightness(115%);
 }
 
 .ButtonContainer {
@@ -281,6 +322,8 @@ button.BlackRedButton {
   flex-wrap: wrap;
   overflow-y: auto;
   max-height: 5.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   max-width: 30rem;
 }
 
@@ -298,7 +341,7 @@ button.BlackRedButton {
   left: 0;
   width: 100%;
   height: 64px;
-  background-color: #474C57;
+  background-color: #CA0707;
   color: #090909;
   font-size: 18px;
   font-weight: bold;
@@ -310,7 +353,7 @@ button.BlackRedButton {
 
 .HomeSubmitButton {
   height: 3rem;
-  background-color: #474C57;
+  background-color: #CA0707;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   border-radius: 0.5rem;
@@ -323,6 +366,11 @@ button.BlackRedButton {
   justify-content: center;
   align-items: center;
   border: none;
+  transition: transform 0.3s ease;
+}
+.HomeSubmitButton:hover {
+  transform: scale(1.03);
+  filter: brightness(115%);
 }
 
 .exerciseComponent {
@@ -359,10 +407,18 @@ button.BlackRedButton {
 .exerciseComponent .exerciseIcon {
   height: 1.875rem;
   width: 1.875rem;
+  transition: transform 0.3s ease;
+}
+.exerciseComponent .exerciseIcon:hover {
+  transform: scale(1.12);
 }
 .exerciseComponent .exerciseIconSmall {
   height: 1.5rem;
   width: 1.5rem;
+  transition: transform 0.3s ease;
+}
+.exerciseComponent .exerciseIconSmall:hover {
+  transform: scale(1.08);
 }
 .exerciseComponent .gifImage {
   height: auto;
@@ -602,6 +658,15 @@ button.BlackRedButton {
   }
   .QuickPadding2 {
     margin-bottom: 1rem;
+  }
+  .exerciseComponent .gifImage {
+    height: auto;
+    max-height: 20rem;
+    max-width: 20rem;
+    margin-top: 1rem;
+  }
+  .ActiveButtonContainer {
+    margin-bottom: -1rem;
   }
 }
 

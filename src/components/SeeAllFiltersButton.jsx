@@ -6,7 +6,7 @@ const SeeAllFiltersButton = () => {
     const { toggleFilterPopout } = useContext(FilterContext);
 
     return (
-        <button className="LightRedButton" onClick={toggleFilterPopout}>
+        <button className="LightRedButton mobile-padding-8" onClick={toggleFilterPopout}>
             <p className="WhiteBold"> See All Filters </p>
             <img src={Filter} className="FilterIcon" alt="Filter" />
         </button>

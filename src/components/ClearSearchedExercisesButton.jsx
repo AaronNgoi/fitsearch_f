@@ -111,7 +111,7 @@ const ClearSearchedExercisesButton = () => {
     };
 
     return (
-        <button className="BlackRedButton" onClick={handleResetClick}>
+        <button className="BlackRedButton mobile-padding-8" onClick={handleResetClick}>
             <p className="WhiteBold">Clear {totalExercises} Exercises</p>
             <img src={xIcon} className="XIcon" alt="X Icon" />
         </button>
