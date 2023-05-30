@@ -170,12 +170,14 @@ p {
 .WhiteBold {
   font-weight: bold;
   color: #FFFFFF;
+  line-height: 1.5rem;
 }
 
 .WhiteBold18 {
   font-weight: bold;
   color: #FFFFFF;
   font-size: 18px;
+  line-height: 1.5rem;
 }
 
 button.BlackRedButton {
@@ -259,6 +261,11 @@ button.BlackRedButton {
   background-color: #737387;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .ActiveFilterButton {
   background-color: #850F05;
   white-space: nowrap;
@@ -305,6 +312,7 @@ button.BlackRedButton {
   height: 3rem;
   background-color: #474C57;
   margin-top: 1rem;
+  margin-bottom: 0.5rem;
   border-radius: 0.5rem;
   width: 100%;
   max-width: 30rem;

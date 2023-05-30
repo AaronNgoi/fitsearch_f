@@ -18,6 +18,7 @@ const ActiveFilters = () => {
         };
 
         searchExercises();
+        // eslint-disable-next-line
     }, [selectedEquipment, selectedBodyPart, selectedTargetMuscle, searchedExerciseName]);
 
     const handleClick = async (selectedFilters, updateSelectedFilters, filter) => {

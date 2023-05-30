@@ -1,5 +1,5 @@
 export const generateApiRequest = (selectedEquipment, searchedExerciseName, selectedBodyPart, selectedTargetMuscle, offset) => {
-    let apiUrl = 'http://3.104.38.105:3000/api/exercises?';
+    let apiUrl = 'https://api.fitsearch.space:3000/api/exercises?';
 
     if (selectedEquipment.length > 0) {
         const equipmentString = selectedEquipment
