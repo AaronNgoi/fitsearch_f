@@ -119,6 +119,7 @@ p {
   height: 3rem;
   width: 3rem;
   transition: transform 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.08);
@@ -171,6 +172,7 @@ p {
   width: 36px;
   height: 36px;
   transition: transform 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.08);
@@ -457,7 +459,7 @@ button.BlackRedButton {
   .exerciseIcon {
     height: 1.875rem;
     width: 1.875rem;
-
+    cursor: pointer;
     transition: transform 0.3s ease;
 
     &:hover {
@@ -468,11 +470,12 @@ button.BlackRedButton {
   .exerciseIconSmall {
     height: 1.5rem;
     width: 1.5rem;
+    cursor: pointer;
 
     transition: transform 0.3s ease;
 
     &:hover {
-      transform: scale(1.08);
+      transform: scale(1.12);
     }
   }
 

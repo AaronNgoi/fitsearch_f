@@ -98,6 +98,7 @@ p {
   height: 3rem;
   width: 3rem;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 .icon-45:hover {
   transform: scale(1.08);
@@ -145,6 +146,7 @@ p {
   width: 36px;
   height: 36px;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 .SearchIcon:hover {
   transform: scale(1.08);
@@ -407,6 +409,7 @@ button.BlackRedButton:hover {
 .exerciseComponent .exerciseIcon {
   height: 1.875rem;
   width: 1.875rem;
+  cursor: pointer;
   transition: transform 0.3s ease;
 }
 .exerciseComponent .exerciseIcon:hover {
@@ -415,10 +418,11 @@ button.BlackRedButton:hover {
 .exerciseComponent .exerciseIconSmall {
   height: 1.5rem;
   width: 1.5rem;
+  cursor: pointer;
   transition: transform 0.3s ease;
 }
 .exerciseComponent .exerciseIconSmall:hover {
-  transform: scale(1.08);
+  transform: scale(1.12);
 }
 .exerciseComponent .gifImage {
   height: auto;
